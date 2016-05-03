@@ -1,0 +1,27 @@
+{
+  "name": "react-native-keyboard-responsive-view",
+  "version": "0.1.0",
+  "description": "A simple View to handle keyboard position for React Native",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahanriat/react-native-keyboard-responsive-view.git"
+  },
+  "keywords": [
+    "ReactNative",
+    "React",
+    "Native",
+    "keyboard",
+    "responsive",
+    "view"
+  ],
+  "author": "ahanriat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahanriat/react-native-keyboard-responsive-view/issues"
+  },
+  "homepage": "https://github.com/ahanriat/react-native-keyboard-responsive-view#readme"
+}
