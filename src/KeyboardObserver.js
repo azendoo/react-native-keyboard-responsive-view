@@ -13,8 +13,8 @@ class KeyboardObserver {
 
   addListener(callback) {
     const id = this.listenerId++;
-    this.listeners.id = callback;
-    return {remove: () => delete this.listeners.id};
+    this.listeners[id] = callback;
+    return {remove: () => delete this.listeners[id]};
   }
 
   notifyListeners() {
