@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahanriat/react-native-keyboard-responsive-view.git"
+    "url": "git+https://github.com/azendoo/react-native-keyboard-responsive-view.git"
   },
   "keywords": [
     "ReactNative",
@@ -21,7 +21,7 @@
   "author": "ahanriat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ahanriat/react-native-keyboard-responsive-view/issues"
+    "url": "https://github.com/azendoo/react-native-keyboard-responsive-view/issues"
   },
-  "homepage": "https://github.com/ahanriat/react-native-keyboard-responsive-view#readme"
+  "homepage": "https://github.com/azendoo/react-native-keyboard-responsive-view#readme"
 }
