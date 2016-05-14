@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Animated,
@@ -36,16 +36,15 @@ class KeyboardResponsiveViewIOS extends Component {
 
   componentDidMount() {
     this.keyboardListener = KeyboardObserver.addListener(this._onChange);
-    InteractionManager.runAfterInteractions(() => {
+    setTimeout(() => {
       if (!this.refs.rootView) {
         return;
       }
       this.refs.rootView.measure( (ox, oy, width, height, px, py) => {
-        this.bottomOffset = Math.min(Dimensions.get('window').height - py - height, 50);
-        this.bottomOffset = Math.max(this.bottomOffset, 0);
+        this.bottomOffset = Math.max(this.Dimensions.get('window').height - py - height, 0);
         this.hanldeKeyboardPosition();
       });
-    });
+    }, 16);
   }
 
   componentDidUpdate() {

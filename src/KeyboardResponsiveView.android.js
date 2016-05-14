@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 /**
 * There is no need to handle the keyboard on Android,
