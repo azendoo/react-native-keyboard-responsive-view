@@ -41,7 +41,7 @@ class KeyboardResponsiveViewIOS extends Component {
         return;
       }
       this.refs.rootView.measure( (ox, oy, width, height, px, py) => {
-        this.bottomOffset = Math.max(this.Dimensions.get('window').height - py - height, 0);
+        this.bottomOffset = Math.max(Dimensions.get('window').height - py - height, 0);
         this.hanldeKeyboardPosition();
       });
     }, 16);
