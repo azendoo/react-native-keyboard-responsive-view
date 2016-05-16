@@ -36,13 +36,16 @@ class KeyboardResponsiveViewIOS extends Component {
 
   componentDidMount() {
     this.keyboardListener = KeyboardObserver.addListener(this._onChange);
+    /**
+    * Measure return an invalid value if we don't wait until the next frame
+    * We also need to wait for animations to perfom before measuring the rootView
+    **/
     setTimeout(() => {
-      if (!this.refs.rootView) {
-        return;
-      }
-      this.refs.rootView.measure( (ox, oy, width, height, px, py) => {
-        this.bottomOffset = Math.max(Dimensions.get('window').height - py - height, 0);
-        this.hanldeKeyboardPosition();
+      InteractionManager.runAfterInteractions(() => {
+        this.refs.rootView.measure( (ox, oy, width, height, px, py) => {
+          this.bottomOffset = Math.max(Dimensions.get('window').height - py - height, 0);
+          this.hanldeKeyboardPosition();
+        });
       });
     }, 16);
   }
