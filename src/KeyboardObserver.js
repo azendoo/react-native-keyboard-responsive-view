@@ -1,4 +1,4 @@
-import {DeviceEventEmitter} from 'react-native';
+import {Keyboard} from 'react-native';
 
 class KeyboardObserver {
 
@@ -7,8 +7,8 @@ class KeyboardObserver {
     this.animationWillEndAt = 0;
     this.listeners = {};
     this.listenerId = 0;
-    DeviceEventEmitter.addListener('keyboardWillShow', this.handleKeyboardWillShow.bind(this));
-    DeviceEventEmitter.addListener('keyboardWillHide', this.handleKeyboardWillHide.bind(this));
+    Keyboard.addListener('keyboardWillShow', this.handleKeyboardWillShow.bind(this));
+    Keyboard.addListener('keyboardWillHide', this.handleKeyboardWillHide.bind(this));
   }
 
   addListener(callback) {
