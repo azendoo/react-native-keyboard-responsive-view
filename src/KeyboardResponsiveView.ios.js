@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React, {
+  Component,
+  PropTypes,
+} from 'react';
 import {
-  StyleSheet,
   Animated,
-  View,
-  Easing,
   Dimensions,
+  Easing,
   InteractionManager,
+  StyleSheet,
+  View,
+  ViewPropTypes,
 } from 'react-native';
 import KeyboardObserver from './KeyboardObserver';
 
@@ -22,7 +26,15 @@ const styles = StyleSheet.create({
 class KeyboardResponsiveViewIOS extends Component {
 
   static propTypes = {
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
+
+    /**
+    * keyboardExtraHeight: number
+    * keyboardExtraHeight is used when view is altered by any native module.
+    * On Azendoo, we used it to add an offset where react-native-navigation
+    *   didn't provide one in the view.
+    **/
+    keyboardExtraHeight: PropTypes.number,
   };
 
   constructor(props, context) {
@@ -75,7 +87,7 @@ class KeyboardResponsiveViewIOS extends Component {
 
   hanldeKeyboardPosition() {
     const {keyboardHeight, animationWillEndAt} = KeyboardObserver.getKeyboardInfo();
-    const toValue = Math.max(keyboardHeight - this.bottomOffset, 0);
+    const toValue = Math.max(keyboardHeight - this.bottomOffset + (this.props.keyboardExtraHeight || 0), 0);
     let duration = Math.max(animationWillEndAt - new Date().getTime(), 50);
     duration = Math.min(duration, 300); // Safety
     Animated.timing(
