@@ -25,18 +25,6 @@ const styles = StyleSheet.create({
 
 class KeyboardResponsiveViewIOS extends Component {
 
-  static propTypes = {
-    style: ViewPropTypes.style,
-
-    /**
-    * keyboardExtraHeight: number
-    * keyboardExtraHeight is used when view is altered by any native module.
-    * On Azendoo, we used it to add an offset where react-native-navigation
-    *   didn't provide one in the view.
-    **/
-    keyboardExtraHeight: PropTypes.number,
-  };
-
   constructor(props, context) {
     super(props, context);
     this.state = {
