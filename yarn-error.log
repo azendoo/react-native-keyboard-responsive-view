@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/local/Cellar/node/9.6.1/bin/node /Users/pierre/.yarn/bin/yarn.js publish
+
+PATH: 
+  /Users/pierre/.yarn/bin:/Users/pierre/.config/yarn/global/node_modules/.bin:/opt/local/bin:/opt/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/Users/pierre/.yarn/bin:/Users/pierre/.config/yarn/global/node_modules/.bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/Cellar/node/9.6.1/bin:/Users/pierre/Library/Android/sdk/tools:/Users/pierre/Library/Android/sdk/platform-tools:/Users/pierre/mybin/DrMemory-MacOS-1.11.0-2/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.6.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "react-native-keyboard-responsive-view",
+    "version": "0.2.1",
+    "description": "A simple View to handle keyboard position for React Native",
+    "main": "src/index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/azendoo/react-native-keyboard-responsive-view.git"
+    },
+    "keywords": [
+      "ReactNative",
+      "React",
+      "Native",
+      "keyboard",
+      "responsive",
+      "view"
+    ],
+    "dependencies": {
+      "prop-types": "^15.6.1",
+    },
+    "author": "ahanriat",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/azendoo/react-native-keyboard-responsive-view/issues"
+    },
+    "homepage": "https://github.com/azendoo/react-native-keyboard-responsive-view#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /Users/pierre/Documents/Azendoo/react-native-keyboard-responsive-view/package.json: Unexpected token } in JSON at position 549
+      at JSON.parse (<anonymous>)
+      at /Users/pierre/.yarn/lib/cli.js:1036:59
+      at Generator.next (<anonymous>)
+      at step (/Users/pierre/.yarn/lib/cli.js:98:30)
+      at /Users/pierre/.yarn/lib/cli.js:109:13
+      at <anonymous>
